@@ -1,0 +1,25 @@
+.cinema {
+    background: rgb(255,66,39);
+    background: linear-gradient(90deg, rgba(255,66,39,1) 0%, rgba(245,111,41,1) 0%, rgba(249,133,71,1) 52%, rgba(246,172,132,1) 83%, rgba(224,124,72,1) 100%);
+
+    &-title {
+        font-weight: bold;
+        font-size: 30px;
+       
+        color: rgb(255, 216, 185);
+        text-transform: uppercase;
+    }
+
+    &--flex {
+        justify-content: center;
+        display: flex;
+    }
+}
+
+@media(min-width: 980px) {
+    .cinema {
+        &-title {
+            font-size: 50px;
+        }
+    }
+}

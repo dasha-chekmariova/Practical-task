@@ -1,0 +1,109 @@
+.header {
+    &-robot {
+        display: flex;
+        justify-content: center;
+    }
+    &-face {
+        background: rgb(255,66,39);
+        background: linear-gradient(90deg, rgba(255,66,39,1) 0%, rgba(245,111,41,1) 0%, rgba(249,133,71,1) 52%, rgba(246,172,132,1) 83%, rgba(224,124,72,1) 100%);
+    
+        height: 70vh;
+        &-h1 {
+            display: flex;
+            justify-content: center;
+            font-size: 25px;
+            text-transform: uppercase;
+    
+            padding-top: 200px;
+            margin-top: 0;
+    
+            color: rgb(255 216 185);
+        }
+    
+        &-h2 {
+            font-size: 10px;
+            color: rgb(110 83 50);
+    
+            margin: 0 40px;
+    
+            display: flex;
+            justify-content: center;
+        }
+        &-img {
+            width: 20%;
+            height: 30%;
+    
+            display: flex;
+            justify-content: center;
+    
+            &-gl {
+               display: none;
+    
+            }
+        }
+    }
+}
+
+@media (min-width: 480px) {
+    .header-face {
+        &-h1 {
+            font-size: 40px;
+        }
+    }
+}
+
+
+@media (min-width: 960px) {
+    .header {
+        &-robot {
+            display: grid;
+            grid-area: 2 / 7 / 4 / 9;
+
+        }
+    }
+    .header-face {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    
+        &-h1 {
+            display: grid;
+            font-size: 45px;
+            text-transform: uppercase;
+            grid-area: 2 / 2 / 3 / 5;
+
+            padding-top: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+    
+            color: rgb(255 216 185);
+        }
+    
+        &-h2 {
+            display: grid;
+
+            font-size: 20px;
+            color: rgb(110 83 50);
+            grid-area: 3 / 2 / 4 / 4;
+
+            margin: 0;
+        }
+
+        &-img {
+            width: 80%;
+            height: 100%;
+    
+            &-gl {
+                display: grid;
+                width: 30%;
+                height: 50%;
+                grid-area: 3 / 6 / 4 / 7;
+    
+            }
+        }
+    }
+}
