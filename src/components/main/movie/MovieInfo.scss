@@ -1,17 +1,13 @@
 .movie{
-
     &-info {
         display: inline-flex;
-
         justify-content: flex-end;
         width: 30vw;
-
         padding: 20px;
     }
 
     &-img {
         border-radius: 20px;
-
         width: 20vw;
         height: 8vh;
     }
@@ -30,7 +26,6 @@
 
         &-img {
             border-radius: 20px;
-    
             width: 15vw;
             height: 15vh;
         }
@@ -42,13 +37,13 @@
         &-info {
             padding: 5px 0;
         }
+
         &-title {
             font-size: 20px;
         }
 
         &-img {
             border-radius: 20px;
-    
             width: 15vw;
             height: 15vh;
         }

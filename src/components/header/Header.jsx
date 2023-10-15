@@ -11,12 +11,10 @@ export const Header = () => {
 
                 <div className="header-robot">
                     <img className='header-face-img' src="robot.png" alt="robot" />
-                    </div>
+                </div>
                 
-                    <img className='header-face-img-gl'src="glass.png" alt="glass" />
-              
+                <img className='header-face-img-gl'src="glass.png" alt="glass" />
             </div>
-            
         </header>
     );
 }

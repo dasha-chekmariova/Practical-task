@@ -1,5 +1,5 @@
 import schedule from '../../../data/Schedule.json';
-import film from '../../../data/Film.json';
+import films from '../../../data/Films.json';
 
 import './Service.scss';
 
@@ -21,20 +21,18 @@ function filterScheduleAndExtractKeys(scheduleData) {
     }
 
     for (let i = 0; i <= filteredDay.length - 1; i++) {
-        
         filterTimeAndDay.push({
             day: filteredDay[i].day,
             planKeys: freeTime(filteredDay[i].plan)
         })
     }
-    console.log(filterTimeAndDay);
-
-
     return filterTimeAndDay;
 
   }
-  filterScheduleAndExtractKeys(schedule)
+  filterScheduleAndExtractKeys(schedule);
+
   let filteredFilms = [];
+
   function filterFilmsByDayAndTime(filmsData, userDayAndPlanKeys) {
     filmsData.map(film => {
         for (let i = 0; i < userDayAndPlanKeys.length; i++) {
@@ -43,21 +41,18 @@ function filterScheduleAndExtractKeys(scheduleData) {
                 filteredFilms.push(film)
             }
         }
-
         return filteredFilms;
     })
   }
   
 
-  filterFilmsByDayAndTime(film, filterTimeAndDay);
-     console.log(filteredFilms)
+filterFilmsByDayAndTime(films, filterTimeAndDay);
 
 export const Service = () => (
     <div className="service">
         <div className="robot">
             <h2 className='service-h2' >I have selected movies for you, the schedule of which coincides with your free time :)</h2>
             <img className='service-img' src="robot.png" alt="robot" />
-        
         </div>
         
         <div className="service-list">
@@ -67,9 +62,7 @@ export const Service = () => (
                 <p className='service-date'>{film.Date.day} {film.Date.time}</p>
                 <img className='service-photoFilm' src={film.Images} alt="img" />
                 </a>
-                
             ))}
         </div>
-       
     </div>
 )

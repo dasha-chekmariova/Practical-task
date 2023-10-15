@@ -5,18 +5,18 @@ import { Service } from "./service/Service";
 
 export const Main = () => (
     <main className="main">
-
-    <div className="main-welcome">
-        <div className="main-h1">
+        <div className="main-welcome">
+            <div className="main-h1">
                 <h1>Welcome to your account in Cinema Trustee!</h1>
             </div>
 
-        <div className="main-schedule">
-            <h2 className="main-h2">This is your schedule on this week:</h2>
+            <div className="main-schedule">
+                <h2 className="main-h2">This is your schedule on this week:</h2>
 
-            <Tables />
+                <Tables />
+            </div>
         </div>
-    </div>
+
         <Cinema />
         <Service />
     </main>
